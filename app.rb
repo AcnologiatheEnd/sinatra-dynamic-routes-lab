@@ -20,5 +20,7 @@ class App < Sinatra::Base
     str
   end
   
-  get 'say/:word/'
+  get '/say/:word1/:word2/:word3/:word4/:word5' do 
+    new_string = "#{params[]}"
+  end
 end
