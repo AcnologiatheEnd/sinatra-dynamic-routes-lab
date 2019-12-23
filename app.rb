@@ -28,4 +28,13 @@ class App < Sinatra::Base
     @word5 = params[:word5]
     "#{@word1} #{@word2} #{@word3} #{@word4} #{@word5}."
   end
+  
+  get '/:operation/:number1/:number2'
+    @operation = params[:operation]
+    @number1 = params[:number1].to_i
+    @number2 = params[:number2].to_i
+    
+    @ans = @number1 @operation @number2
+    "#{@ans}"
+  end
 end
